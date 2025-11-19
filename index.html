@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Music App - Frontend Only</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <aside class="sidebar">
+    <div class="logo">MyMusic</div>
+    <nav>
+      <button class="nav-btn active" data-page="home">Home</button>
+      <button class="nav-btn" data-page="favs">Favourites</button>
+      <button class="nav-btn" data-page="playlists">Playlists</button>
+      <button class="nav-btn" data-page="create-playlist">Create Playlist</button>
+      <button class="nav-btn" data-page="search">Search</button>
+      <a class="admin-link" href="admin.html" target="_blank">Open Admin Panel →</a>
+    </nav>
+  </aside>
+
+  <main class="main">
+    <header class="topbar">
+      <h1 id="page-title">Home</h1>
+      <div class="search-small">
+        <input id="search-input" placeholder="Search songs or artist..." />
+        <button id="search-btn">Search</button>
+      </div>
+    </header>
+
+    <section id="page-content" class="content">
+      <!-- Dynamic content injected here by script.js -->
+    </section>
+  </main>
+
+  <!-- Bottom Player -->
+  <div class="player">
+    <div class="player-left">
+      <img id="player-img" src="" alt="cover" />
+      <div class="player-meta">
+        <div id="player-title">No song</div>
+        <div id="player-artist">—</div>
+      </div>
+    </div>
+
+    <div class="player-center">
+      <div class="controls">
+        <button id="prev-btn">⏮</button>
+        <button id="play-btn">⏯</button>
+        <button id="next-btn">⏭</button>
+      </div>
+
+      <div class="progress">
+        <span id="current-time">0:00</span>
+        <input id="seek" type="range" min="0" max="100" value="0" />
+        <span id="duration">0:00</span>
+      </div>
+    </div>
+
+    <div class="player-right">
+      <input id="volume" type="range" min="0" max="1" step="0.01" value="1" />
+    </div>
+
+    <audio id="audio"></audio>
+  </div>
+
+  <script src="data/songs.js"></script>
+  <script src="utils/localStorage.js"></script>
+  <script src="utils/helpers.js"></script>
+  <script src="utils/idb.js"></script>
+  <script src="script.js"></script>
+</body>
+</html>

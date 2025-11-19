@@ -1,0 +1,73 @@
+<!-- Sidebar Menu Component -->
+
+<div class="sidebar-container">
+    <div class="sidebar-menu">
+        <div class="menu-item active" data-view="all">
+            <span>🎵</span>
+            <span>All Songs</span>
+        </div>
+
+        <div class="menu-item" data-view="favorites">
+            <span>❤️</span>
+            <span>Favorites</span>
+        </div>
+
+        <div class="menu-item" data-view="playlist">
+            <span>📝</span>
+            <span>Playlist</span>
+        </div>
+
+        <div class="menu-item" data-view="recent">
+            <span>🕐</span>
+            <span>Recent</span>
+        </div>
+
+        <hr class="sidebar-divider">
+
+        <div class="menu-item" data-view="settings">
+            <span>⚙️</span>
+            <span>Settings</span>
+        </div>
+    </div>
+</div>
+
+<style>
+    .sidebar-container {
+        padding: 20px 0;
+    }
+
+    .sidebar-menu {
+        display: flex;
+        flex-direction: column;
+        gap: 10px;
+    }
+
+    .menu-item {
+        display: flex;
+        align-items: center;
+        gap: 15px;
+        padding: 15px;
+        cursor: pointer;
+        border-radius: 8px;
+        transition: background-color 0.3s ease;
+    }
+
+    .menu-item:hover {
+        background-color: var(--primary-color);
+    }
+
+    .menu-item.active {
+        background-color: var(--primary-color);
+        font-weight: bold;
+    }
+
+    .menu-item span:first-child {
+        font-size: 1.2rem;
+    }
+
+    .sidebar-divider {
+        border: none;
+        border-top: 1px solid #404040;
+        margin: 10px 0;
+    }
+</style>

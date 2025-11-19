@@ -1,0 +1,69 @@
+<!-- Top Navigation Bar Component -->
+
+<div class="navbar-container">
+    <div class="navbar-left">
+        <h1 class="logo">Animesh</h1>
+    </div>
+
+    <div class="navbar-center">
+        <input type="text" class="search-bar" placeholder="Search songs...">
+    </div>
+
+    <div class="navbar-right">
+        <a href="admin.html" class="btn-admin">Admin Panel</a>
+    </div>
+</div>
+
+<style>
+    .navbar-container {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 15px 20px;
+        background-color: var(--secondary-color);
+        border-radius: 8px;
+    }
+
+    .navbar-left .logo {
+        font-size: 1.8rem;
+        color: var(--primary-color);
+        font-weight: bold;
+    }
+
+    .navbar-center {
+        flex: 1;
+        margin: 0 20px;
+    }
+
+    .search-bar {
+        width: 100%;
+        padding: 10px 15px;
+        background-color: var(--bg-darker);
+        border: 1px solid #404040;
+        border-radius: 20px;
+        color: var(--text-color);
+    }
+
+    .search-bar::placeholder {
+        color: #b3b3b3;
+    }
+
+    .search-bar:focus {
+        outline: none;
+        border-color: var(--primary-color);
+    }
+
+    .btn-admin {
+        padding: 10px 20px;
+        background-color: var(--primary-color);
+        color: var(--bg-darker);
+        text-decoration: none;
+        border-radius: 20px;
+        font-weight: bold;
+        transition: background-color 0.3s ease;
+    }
+
+    .btn-admin:hover {
+        background-color: #1ed760;
+    }
+</style>

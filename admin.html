@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Admin Panel - Add Songs</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+<h2>Add New Song</h2>
+
+<div class="admin-box">
+
+    <label>Song Title:</label>
+    <input type="text" id="song-title" placeholder="Enter song title">
+
+    <label>Artist Name:</label>
+    <input type="text" id="song-artist" placeholder="Enter artist">
+
+    <label>Select Song File (.mp3):</label>
+    <input type="file" id="song-file" accept="audio/mp3,audio/*">
+
+    <label>Select Poster Image:</label>
+    <input type="file" id="song-img" accept="image/*">
+
+    <button onclick="addSong()">Add Song</button>
+</div>
+
+<script src="utils/helpers.js"></script>
+<script src="utils/localStorage.js"></script>
+<script src="utils/idb.js"></script>
+<script src="admin.js"></script>
+
+</body>
+</html>
